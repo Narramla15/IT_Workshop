@@ -1,0 +1,89 @@
+nikhil@narramla:~$ cat> grepfilter.txt
+welcome to ubuntu
+hi this is linus / unix commands
+rgukt rajiv gandhi university knowledge technology
+nikhil@narramla:~$ grep "rgukt" grpfilter.txt
+grep: grpfilter.txt: No such file or directory
+nikhil@narramla:~$ gerp "rgukt" grepfilter.txt
+Command 'gerp' not found, did you mean:
+  command 'grep' from deb grep (3.7-1build1)
+Try: sudo apt install <deb name>
+nikhil@narramla:~$ grep "rgukt" grepfilter.txt
+rgukt rajiv gandhi university knowledge technology
+nikhil@narramla:~$ grep 's/rgukt/Rgukt/' grepfilter.txt
+nikhil@narramla:~$ grep -n "unix" grepfilter.txt
+2:hi this is linus / unix commands
+nikhil@narramla:~$ grep -v "unix" grepfilter.txt
+welcome to ubuntu
+rgukt rajiv gandhi university knowledge technology
+nikhil@narramla:~$ grep -h "unix" grepfilter.txt
+hi this is linus / unix commands
+nikhil@narramla:~$ grep -o "unix" grepfilter.txt
+unix
+nikhil@narramla:~$ grep -o  grepfilter.txt
+o
+^C
+nikhil@narramla:~$ cat>monthfile.txt
+jan
+feb
+mar
+april
+may
+nikhil@narramla:~$ sort month.txt
+sort: cannot read: month.txt: No such file or directory
+nikhil@narramla:~$ sort monthfile.txt
+april
+feb
+jan
+mar
+may
+nikhil@narramla:~$ sort -r monthfile.txt
+may
+mar
+jan
+feb
+april
+nikhil@narramla:~$ sed 's/may/dec/' monthfile.txt
+jan
+feb
+mar
+april
+dec
+nikhil@narramla:~$ 
+nikhil@narramla:~$ sed 's/jan/JAN/g' monthfile.txt
+JAN
+feb
+mar
+april
+may
+nikhil@narramla:~$ sed 's/jan/JAN/' monthfile.txt
+JAN
+feb
+mar
+april
+may
+nikhil@narramla:~$ sed 's/jan/' monthfile.txt
+sed: -e expression #1, char 6: unterminated `s' command
+nikhil@narramla:~$ sed 's/jan/g' monthfile.txt
+sed: -e expression #1, char 7: unterminated `s' command
+nikhil@narramla:~$ cat >emp.txt
+nikhil manager account 10000000
+nithin manager acccount 20000
+chandu manager account 3000
+shiva manager account 20
+vijay manager account 2
+nikhil@narramla:~$ awk '{print $1,$4}' emp.txt
+nikhil 10000000
+nithin 20000
+chandu 3000
+shiva 20
+vijay 2
+nikhil@narramla:~$ awk '/manager/{print}' emp.txt
+nikhil manager account 10000000
+nithin manager acccount 20000
+chandu manager account 3000
+shiva manager account 20
+vijay manager account 2
+nikhil@narramla:~$ 
+
+
